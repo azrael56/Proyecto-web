@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú de "La Nonna"</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f5deb3; 
+        }
+
+        .container {
+            margin-top: 20px;
+        }
+
+        .product-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .product-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .product-container .price {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .add-to-cart-btn {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .cart {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .search-container {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .search-input {
+            padding: 10px;
+            width: 80%;
+            max-width: 400px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pizzería "La Nonna"</h1>
+    <div class="search-container">
+        <input type="text" class="search-input" placeholder="Buscar productos..." oninput="searchPizzas()">
+    </div>
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-md-4">
+                <div class="product-container">
+                    <img src="pizza-margarita.jpg" alt="Pizza Margarita con salsa de tomate y queso mozzarella">
+                    <p class="price">$10.000</p>
+                    <p class="name">Pizza Margarita</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Pizza Margarita', 10000)">Agregar al carrito</button>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="product-container">
+                    <img src="pizza-pepperoni.jpg" alt="Pizza Pepperoni con rodajas de pepperoni y queso">
+                    <p class="price">$12.000</p>
+                    <p class="name">Pizza Pepperoni</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Pizza Pepperoni', 12000)">Agregar al carrito</button>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="product-container">
+                    <img src="pizzahawaina.jpg" alt="Pizza Hawaiana con piña y jamón">
+                    <p class="price">$14.000</p>
+                    <p class="name">Pizza Hawaiana</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Pizza Hawaiana', 14000)">Agregar al carrito</button>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="product-container">
+                    <img src="pizzacuatroquesos.jpg" alt="Pizza Cuatro Quesos con mozzarella, cheddar, parmesano y gorgonzola">
+                    <p class="price">$15.000</p>
+                    <p class="name">Pizza Cuatro Quesos</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Pizza Cuatro Quesos', 15000)">Agregar al carrito</button>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="product-container">
+                    <img src="Combo-familia.webp" alt="Combo Familia con una variedad de pizzas y acompañamientos">
+                    <p class="price">$25.000</p>
+                    <p class="name">Combo Familia</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Combo Familia', 25000)">Agregar al carrito</button>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="product-container">
+                    <img src="Combo-pareja.jpg" alt="Combo Pareja con dos pizzas y acompañamientos">
+                    <p class="price">$18.000</p>
+                    <p class="name">Combo Pareja</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Combo Pareja', 18000)">Agregar al carrito</button>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="product-container">
+                    <img src="papasfritas.jpg.png" alt="Papas Fritas crujientes">
+                    <p class="price">$2.000</p>
+                    <p class="name">Papas Fritas</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Papas Fritas', 2000)">Agregar al carrito</button>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="product-container">
+                    <img src="ensaladamixta.jpeg" alt="Ensalada Mixta con una variedad de vegetales frescos">
+                    <p class="price">$3.000</p>
+                    <p class="name">Ensalada Mixta</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Ensalada Mixta', 3000)">Agregar al carrito</button>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="product-container">
+                    <img src="arrozconvegetales.jpg" alt="Arroz con Vegetales frescos">
+                    <p class="price">$3.500</p>
+                    <p class="name">Arroz con Vegetales</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Arroz con Vegetales', 3500)">Agregar al carrito</button>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="product-container">
+                    <img src="jugosnaturales.jpeg" alt="Jugos Naturales variados">
+                    <p class="price">$2.000</p>
+                    <p class="name">Jugos Naturales</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Jugos Naturales', 2000)">Agregar al carrito</button>
+                </div>
+            </div>
+           
+            <div class="col-md-4">
+                <div class="product-container">
+                    <img src="cervezas.webp" alt="Cervezas frías y refrescantes">
+                    <p class="price">$2.500</p>
+                    <p class="name">Cervezas</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Cervezas', 2500)">Agregar al carrito</button>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="product-container">
+                    <img src="bebidas.jpg" alt="Bebidas carbonatadas">
+                    <p class="price">$1.500</p>
+                    <p class="name">Bebidas</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Bebidas', 1500)">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cart">
+        <h2>Carrito de Compras</h2>
+        <div id="cart-items">
+            
+        </div>
+        <h3>Total: <span id="total-price">0</span> CLP</h3>
+        <h4>Método de Pago:</h4>
+        <select id="payment-method">
+            <option value="efectivo">Efectivo</option>
+            <option value="tarjeta-credito">Tarjeta de Crédito</option>
+            <option value="tarjeta-debito">Tarjeta de Débito</option>
+            <option value="transferencia">Transferencia Bancaria</option>
+        </select>
+        <button onclick="checkout()">Realizar Pago</button>
+    </div>
+
+    <script>
+        
+        function addToCart(productName, productPrice) {
+            var cartItems = document.getElementById('cart-items');
+            var totalPriceElement = document.getElementById('total-price');
+            
+            
+            var newItem = document.createElement('li');
+            newItem.textContent = productName + ' - $' + productPrice;
+            
+            cartItems.appendChild(newItem);
+            
+            
+            var total = parseInt(totalPriceElement.textContent);
+            total += productPrice;
+            totalPriceElement.textContent = total;
+        }
+
+        
+        function checkout() {
+            var paymentMethod = document.getElementById('payment-method').value;
+            var total = parseInt(document.getElementById('total-price').textContent);
+            
+            alert('Pago realizado exitosamente por un total de ' + total + ' CLP mediante ' + paymentMethod);
+            
+            document.getElementById('cart-items').innerHTML = '';
+            document.getElementById('total-price').textContent = '0';
+        }
+
+        
+        function searchPizzas() {
+            var input = document.querySelector('.search-input');
+            var filter = input.value.toUpperCase();
+            var containers = document.querySelectorAll('.product-container');
+            
+            containers.forEach(function(container) {
+                var text = container.textContent.toUpperCase();
+                container.style.display = text.indexOf(filter) > -1 ? '' : 'none';
+            });
+        }
+    </script>
+</body>
+</html>

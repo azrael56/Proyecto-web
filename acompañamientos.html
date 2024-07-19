@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acompañamientos - Pizzería "La Nonna"</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheet.css"> 
+    <style>
+        body {
+            background-color: #D2B48C; 
+            margin: 0;
+            padding: 0;
+        }
+        .accompaniment-container {
+            margin-top: 20px;
+            padding: 20px;
+        }
+        .accompaniment {
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s, background-color 0.3s; 
+            cursor: pointer;
+            border-radius: 10px; 
+        }
+        .accompaniment:hover {
+            transform: scale(1.05);
+            background-color: #f8f9fa;
+        }
+        .accompaniment img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+            border-radius: 10px; 
+        }
+        .accompaniment-info {
+            display: none;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px;
+            bottom: -120px;
+            left: 0;
+            right: 0;
+            transition: bottom 0.3s ease-in-out;
+            border-radius: 10px; 
+        }
+        .accompaniment:hover .accompaniment-info {
+            display: block;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container" style="background-color: rgb(207, 48, 48); text-align: center; padding: 20px;">
+    <h2 style="color: white;">Acompañamientos</h2>
+</div>
+
+<div class="container">
+    <div class="row accompaniment-container">
+        
+        <div class="col-md-4 accompaniment" style="background-color: rgb(40, 137, 53);" onclick="addToCart('Papas Fritas', 2000)">
+            <img src="papasfritas.jpg.png" alt="Papas Fritas">
+            <p style="color: white;">Papas Fritas</p>
+            <p style="color: white;">Precio: $2000 CLP</p>
+            <div class="accompaniment-info">Deliciosas papas fritas crujientes.</div>
+        </div>
+        
+        <div class="col-md-4 accompaniment" style="background-color: rgb(255, 255, 255);" onclick="addToCart('Ensalada Mixta', 2500)">
+            <img src="ensaladamixta.jpeg" alt="Ensalada Mixta">
+            <p>Ensalada Mixta</p>
+            <p>Precio: $2500 CLP</p>
+            <div class="accompaniment-info">Ensalada fresca con una variedad de vegetales.</div>
+        </div>
+        
+        <div class="col-md-4 accompaniment" style="background-color: rgb(207, 48, 48);" onclick="addToCart('Arroz con Vegetales', 3000)">
+            <img src="arrozconvegetales.jpg" alt="Arroz con Vegetales">
+            <p style="color: white;">Arroz con Vegetales</p>
+            <p style="color: white;">Precio: $3000 CLP</p>
+            <div class="accompaniment-info">Arroz blanco con vegetales frescos.</div>
+        </div>
+        
+        <div class="col-md-4 accompaniment" style="background-color: rgb(123, 104, 238);" onclick="addToCart('Bebidas', 1500)">
+            <img src="bebidas.jpg" alt="Bebidas">
+            <p>Bebidas</p>
+            <p>Precio: $1500 CLP</p>
+            <div class="accompaniment-info">Refresco carbonatado.</div>
+        </div>
+        
+        <div class="col-md-4 accompaniment" style="background-color: rgb(255, 192, 203);" onclick="addToCart('Jugos Naturales', 2000)">
+            <img src="jugosnaturales.jpeg" alt="Jugos Naturales">
+            <p>Jugos Naturales</p>
+            <p>Precio: $2000 CLP</p>
+            <div class="accompaniment-info">Jugos naturales de diferentes sabores.</div>
+        </div>
+        
+        <div class="col-md-4 accompaniment" style="background-color: rgb(255, 255, 255);" onclick="addToCart('Cervezas', 2500)">
+            <img src="cervezas.webp" alt="Cervezas">
+            <p>Cervezas</p>
+            <p>Precio: $2500 CLP</p>
+            <div class="accompaniment-info">Cervezas frías y refrescantes.</div>
+        </div>        
+    </div>
+</div>
+
+<script>
+    function addToCart(productName, productPrice) {
+        
+        window.location.href = "carrito.html";
+        
+    }
+</script>
+
+</body>
+</html>

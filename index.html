@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>|| Pizzería "La Nonna" ||</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheet.css">
+    <style>
+        .btn:hover {
+            cursor: pointer;
+        }
+        .btn-registro {
+            font-size: 24px;
+            background-color: blue;
+            border: 2px solid #000;
+            border-radius: 10px;
+            padding: 10px 20px;
+            color: white;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .btn-registro:hover {
+            background-color: #004080;
+            color: #fff;
+        }
+        .video-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container text-center my-4">
+    <h1>Pizzería "La Nonna"</h1>
+    <p>¡Bienvenido a nuestra pizzería!</p>
+    <p>Aquí encontrarás las mejores pizzas y acompañamientos. Por favor, <strong>mira nuestros productos</strong> y disfruta de un gran momento!</p>
+</div>
+
+<img src="logo.jpg" alt="Logo de la pizzería" class="img-fluid" style="width: 100%; height: auto;">
+
+<div class="container my-4">
+    <div class="row">
+        <div class="col-12 col-md-4 mb-3">
+            <div class="card" style="background-color: rgb(40, 137, 53); padding: 20px;">
+                <strong>Pizzas --> </strong>
+                <a href="vista.html">
+                    <button type="button" class="btn btn-primary" style="background: none; border: none;">
+                        <img src="icono_pizza.png" alt="Icono1" width="50" height="50">
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div class="col-12 col-md-4 mb-3">
+            <div class="card" style="background-color: rgb(255, 255, 255); padding: 20px;">
+                <strong>Acompañamientos --> </strong>
+                <a href="acompañamientos.html">
+                    <button type="button" class="btn btn-primary" style="background: none; border: none;">
+                        <img src="icono_bebida.png" alt="Icono2" width="50" height="50">
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div class="col-12 col-md-4 mb-3">
+            <div class="card" style="background-color: rgb(207, 48, 48); padding: 20px;">
+                <strong>Sucursales --> </strong>
+                <a href="sucursales.html">
+                    <button type="button" class="btn btn-primary" style="background: none; border: none;">
+                        <img src="icono_sucursal.png" alt="Icono3" width="50" height="50">
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container my-4">
+    <div id="pizza-menu" class="row">
+      
+    </div>
+</div>
+
+<div class="container my-4">
+    <h2>Ordena tu Pizza</h2>
+    <form id="order-form" method="POST" action="order_process.php">
+        <div class="form-group">
+            <label for="customer-name">Nombre:</label>
+            <input type="text" id="customer-name" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="address">Dirección:</label>
+            <input type="text" id="address" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="pizza-select">Elige tu pizza:</label>
+            <select id="pizza-select" class="form-control" required>
+                
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Ordenar</button>
+    </form>
+</div>
+
+<div class="container my-4">
+    <h2>Carrito de Compras</h2>
+    <div id="cart-items"></div>
+    <button id="checkout-button" class="btn btn-success">Finalizar Compra</button>
+</div>
+
+<div class="container text-center my-4">
+    <button onclick="window.location.href='registro.html'" class="btn btn-primary btn-lg mt-3 btn-registro">
+        Registrarse <i class="fas fa-question-circle"></i>
+    </button>
+</div>
+
+<div class="video-container my-4">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/T3AHBe0I0yc?si=ln8b73gDteVci-Cd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+<script src="scripts.js"></script>
+</body>
+</html>

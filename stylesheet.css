@@ -1,0 +1,298 @@
+body {
+    font-family: 'Courier New', Courier, monospace; /* Cambiar la fuente del texto */
+    margin: 0; /* Eliminar los márgenes predeterminados */
+    padding: 0; /* Eliminar el relleno predeterminado */
+    background-color: #edf0ca; /* Color de fondo */
+}
+
+.container {
+    width: 80%; /* Ancho del contenedor principal */
+    margin: 20px auto; /* Centrar el contenedor */
+    background-color: #ddc38f; /* Color de fondo del contenedor */
+    padding: 20px; /* Relleno del contenedor */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.container2 {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+h1 {
+    text-align: center; /* Centrar el encabezado */
+    color: #000000; /* Color del texto */
+}
+
+table {
+    width: 100%; /* Ancho de la tabla */
+    border-collapse: collapse; /* Colapso de bordes */
+}
+
+th, td {
+    padding: 8px; /* Relleno de las celdas */
+    text-align: left; /* Alineación del texto */
+    border-bottom: 1px solid #ddd; /* Borde inferior */
+}
+
+th {
+    background-color: #f2f2f2; /* Color de fondo del encabezado */
+}
+
+.imagen {
+    border-radius: 0%;
+    resize: both;
+    width: auto;
+    height: auto;
+}
+
+.registro-form {
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+}
+
+.form-group {
+    margin-bottom: 10px;
+    padding: auto;
+}
+
+.label {
+    margin-bottom: 5px;
+}
+
+.pizza {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer; 
+}
+.pizza img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+.pizza:hover {
+    transform: scale(1.05);
+}
+.pizza:hover img {
+    transform: scale(1.2);
+}
+.pizza-title {
+    font-size: 32px;
+    margin: 10px 0;
+    color: #fdd835; 
+    background: linear-gradient(45deg, #d32f2f, #ff5722); 
+    -webkit-text-fill-color: transparent; 
+    background-clip: text; 
+    transition: transform 0.3s ease; 
+}
+.pizza:hover .pizza-title { 
+    transform: scale(1.1); 
+}
+.pizza-price {
+    font-weight: bold;
+}
+.combo {
+    color: #888;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 48px; 
+    background: linear-gradient(45deg, #ff9800, #ffeb3b); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    background-clip: text; 
+    transition: transform 0.3s ease; 
+}
+.h1:hover { 
+    transform: scale(1.1); 
+}
+.pizzeria-expanded {
+    font-size: 72px; 
+}
+.pizza-link {
+    text-decoration: none;
+    color: inherit;
+}
+.search-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.search-input {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+}
+.button-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.button-container button {
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #ff5722;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.button-container button:hover {
+    background-color: #d32f2f;
+}
+
+.pizza-details {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.pizza-details img {
+    width: 100%; /* Ajustar el tamaño máximo de la imagen */
+    max-height: 300px; /* Altura máxima para evitar que la imagen sea demasiado alta */
+    border-radius: 5px;
+}
+.pizza-title {
+    font-size: 24px;
+    margin: 10px 0;
+}
+.pizza-price {
+    font-size: 18px;
+    font-weight: bold;
+}
+.purchase-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+.purchase-form input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.purchase-form input[type="submit"]:hover {
+    background-color: #d32f2f;
+}
+
+.container3 {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+.pizza {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer; 
+}
+.pizza img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+.pizza:hover {
+    transform: scale(1.05);
+}
+.pizza:hover img {
+    transform: scale(1.2);
+}
+.pizza-title1 {
+    font-size: 32px;
+    margin: 10px 0;
+    color: #fdd835; 
+    background: linear-gradient(45deg, #d32f2f, #ff5722); 
+    -webkit-text-fill-color: transparent; 
+    background-clip: text; 
+    transition: transform 0.3s ease; 
+}
+.pizza:hover .pizza-title1 { 
+    transform: scale(1.1); 
+}
+.pizza-price1 {
+    font-weight: bold;
+}
+.combo {
+    color: #888;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 48px; 
+    background: linear-gradient(45deg, #ff9800, #ffeb3b); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    background-clip: text; 
+    transition: transform 0.3s ease; 
+}
+.h1:hover { 
+    transform: scale(1.1); 
+}
+.pizzeria-expanded {
+    font-size: 72px; 
+}
+.pizza-link {
+    text-decoration: none;
+    color: inherit;
+}
+.search-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.search-input {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+}
+.button-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.button-container button {
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #ff5722;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.button-container button:hover {
+    background-color: #d32f2f;
+}
+body {
+    background-color: #F5DEB3; /* Color café claro */
+}

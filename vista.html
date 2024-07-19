@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú de "La Nonna"</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f5deb3; 
+        }
+
+        h1 {
+            margin-top: 20px; 
+        }
+
+        .search-container {
+            text-align: center;
+            margin-bottom: 20px; 
+        }
+
+        .search-input {
+            color: #333;
+            border: 1px solid #333; 
+            border-radius: 5px; 
+            padding: 8px; 
+            width: 80%;
+            margin-bottom: 20px; 
+        }
+
+        .search-input:focus {
+            outline: none;  
+            border-color: #28a745; 
+        }
+
+        .search-input::placeholder {
+            color: #999; 
+        }
+
+        .container {
+            padding: 0 15px;
+        }
+
+        .product-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-bottom: 20px;
+            cursor: pointer; 
+        }
+
+        .product-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .product-container .price {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: black;
+        }
+
+        .product-container h2.name {
+            color: black; 
+            text-decoration: none; 
+        }
+
+        .add-to-cart-btn {
+            display: block; 
+            margin-top: 10px; 
+        }
+
+        .add-to-cart-btn:hover {
+            background-color: #218838;
+            color: white; 
+        }
+    </style>
+</head>
+<body>
+    <h1 class="text-center">Pizzeria "La Nonna"</h1>
+    <div class="search-container">
+        <input type="text" class="search-input" placeholder="Buscar..." oninput="searchPizzas()">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="carrito.html" onclick="addToCart('Pizza Margarita', 10000)">
+                    <div class="product-container">
+                        <img src="pizza-margarita.jpg" alt="Pizza Margarita">
+                        <p class="price">$10.000</p>
+                        <h2 class="name">Pizza Margarita</h2>
+                        <button class="add-to-cart-btn btn btn-success">Agregar al Carrito</button>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="carrito.html" onclick="addToCart('Pizza Pepperoni', 12000)">
+                    <div class="product-container">
+                        <img src="pizza-pepperoni.jpg" alt="Pizza Pepperoni">
+                        <p class="price">$12.000</p>
+                        <h2 class="name">Pizza Pepperoni</h2>
+                        <button class="add-to-cart-btn btn btn-success">Agregar al Carrito</button>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="carrito.html" onclick="addToCart('Combo Familia', 25000)">
+                    <div class="product-container">
+                        <img src="Combo-familia.webp" alt="Combo Familia">
+                        <p class="price">$25.000</p>
+                        <h2 class="name">Combo Familia</h2>
+                        <button class="add-to-cart-btn btn btn-success">Agregar al Carrito</button>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="carrito.html" onclick="addToCart('Combo Pareja', 18000)">
+                    <div class="product-container">
+                        <img src="Combo-pareja.jpg" alt="Combo Pareja">
+                        <p class="price">$18.000</p>
+                        <h2 class="name">Combo Pareja</h2>
+                        <button class="add-to-cart-btn btn btn-success">Agregar al Carrito</button>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="carrito.html" onclick="addToCart('Pizza Hawaiana', 14000)">
+                    <div class="product-container">
+                        <img src="pizzahawaina.jpg" alt="Pizza Hawaiana">
+                        <p class="price">$14.000</p>
+                        <h2 class="name">Pizza Hawaiana</h2>
+                        <button class="add-to-cart-btn btn btn-success">Agregar al Carrito</button>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="carrito.html" onclick="addToCart('Pizza Cuatro Quesos', 15000)">
+                    <div class="product-container">
+                        <img src="pizzacuatroquesos.jpg" alt="Pizza Cuatro Quesos">
+                        <p class="price">$15.000</p>
+                        <h2 class="name">Pizza Cuatro Quesos</h2>
+                        <button class="add-to-cart-btn btn btn-success">Agregar al Carrito</button>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function addToCart(productName, productPrice) {
+            console.log('Producto agregado:', productName, 'Precio:', productPrice);
+            
+
+            window.location.href = 'carrito.html';
+        }
+
+        function searchPizzas() {
+            var input, filter, container, items, i, item;
+            input = document.querySelector('.search-input');
+            filter = input.value.toUpperCase();
+            container = document.querySelector('.container');
+            items = container.querySelectorAll('.product-container');
+            
+            for (i = 0; i < items.length; i++) {
+                item = items[i];
+                if (item.textContent.toUpperCase().indexOf(filter) > -1) {
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
